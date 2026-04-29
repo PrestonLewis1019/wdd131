@@ -22,11 +22,11 @@ list.style.border = "3px solid black"
 
 let para = document.querySelector('p');
 
-para. clas
+
 
 para.style.fontSize = '2em';
 
-
+para.classList.add('background');
 const image = document.querySelector('img');
 
 image.setAttribute('src', 'images/new_photos.jpg');
@@ -39,9 +39,18 @@ selectElem.addEventListener('change', function(){
 })
 
 const dropdown = document.querySelector("#webdevlist");
+ const html = document.querySelector('#html');
+ const css = document.querySelector('#css');
+ const js = document.querySelector('#js');
 
-headertwo.style.color= "purple";
-dropdown.addEventListener(' change ' , function (){let dropdownValue = selectElem.value;
-    console.log(dropdownValue)
-document.getElementById(codeValue) .style.color = 'red' 
+
+
+dropdown.addEventListener('change' , function (){
+    let dropdownValue = selectElem.value;
+    html.style.color= "purple";
+    css.style.color= "purple";
+    js.style.color= "purple";
+ console.log(dropdownValue)
+    let codeValue= dropdown.value;
+document.getElementById(dropdownValue) .style.color = 'red' 
 });
