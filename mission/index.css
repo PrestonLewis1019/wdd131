@@ -1,7 +1,9 @@
-body{ 
+body{
     background-color:  #f9f9f9;;
     font-size: 20px;
 }
+
+
 
 #content {
     max-width: 900px;
@@ -50,3 +52,4 @@ img {
     margin: 0 auto;
     text-align: left;
  list-style-type: none;}
+
