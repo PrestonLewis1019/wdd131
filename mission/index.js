@@ -7,9 +7,27 @@ selectElem.addEventListener('change', changeTheme);
 function changeTheme() {
     let current = selectElem.value;
     if (current == 'dark') {
-        // code for changes to colors and logo
+         document.body.style.backgroundColor = "#121212";
+        document.body.style.color = "white";
+        logo.style.filter = "invert(1)";
+
+        document.querySelectorAll("h1, h2").forEach(h => {
+            h.style.color = "white";
+              logo.style.backgroundColor = "black";
+ 
+        });
+   
     } else {
-        // code for changes to colors and logo
+
+        document.body.style.backgroundColor = "#f9f9f9";
+        document.body.style.color = "black";
+        logo.style.filter = "invert(0)";
+
+        document.querySelectorAll("h1, h2").forEach(h => {
+            h.style.color = "black";
+                logo.style.filter = "invert(0)";
+
+        });
     }
-}           
+}
                     
