@@ -9,7 +9,7 @@ function changeTheme() {
 
   if (current == "dark") {
 
-    document.body.style.backgroundColor = "#121212";
+    document.body.style.backgroundColor = "#000000";
     document.body.style.color = "white";
 
     logo.style.filter = "invert(1)";
