@@ -5,29 +5,26 @@ let logo = document.querySelector('img');
 selectElem.addEventListener('change', changeTheme);
 
 function changeTheme() {
-    let current = selectElem.value;
-    if (current == 'dark') {
-         document.body.style.backgroundColor = "#121212";
-        document.body.style.color = "white";
-        logo.style.filter = "invert(1)";
+  let current = selectElem.value;
 
-        document.querySelectorAll("h1, h2").forEach(h => {
-            h.style.color = "white";
-              logo.style.backgroundColor = "black";
- 
-        });
+  if (current == "dark") {
+
+    document.body.style.backgroundColor = "#121212";
+    document.body.style.color = "white";
+
+    logo.style.filter = "invert(1)";
    
-    } else {
 
-        document.body.style.backgroundColor = "#f9f9f9";
-        document.body.style.color = "black";
-        logo.style.filter = "invert(0)";
+    document.querySelector("h1, h2").style.color = "white";
 
-        document.querySelectorAll("h1, h2").forEach(h => {
-            h.style.color = "black";
-                logo.style.filter = "invert(0)";
+  } else {
 
-        });
-    }
+    document.body.style.backgroundColor = "#f9f9f9";
+    document.body.style.color = "black";
+
+    logo.style.filter = "invert(0)";
+    
+
+    document.querySelector("h1, h2").style.color = "black";
+  }
 }
-                    
