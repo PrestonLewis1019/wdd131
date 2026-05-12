@@ -47,7 +47,7 @@ img {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  boarder: 5px solid #973b3b;
+  
 }
 .menu-btn {
     cursor: pointer;
