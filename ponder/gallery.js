@@ -9,7 +9,14 @@ gallery.addEventListener('click', openModal);
 
 function openModal(e) {
     
-// Code to show modal  - Use event parameter 'e'   
+console.log(e.target);
+const ing = e.target;
+const src = ing.getAttribute('src');
+const alt = ing.getAttribute('alt');
+const full = src.replace('sm', 'full');
+modalImage.setAttribute('src', full);
+modalImage.setAttribute('alt', alt);
+modal.showModal();
     
 }
 // Close modal on button click
