@@ -11,9 +11,16 @@ header, footer {
     padding: 1rem;
     text-align: center;
 }
+.book h1 {
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px;
+}
 .main-nav {
     list-style: none;
     padding: 0;
+    justify-items: center;
 }
 .main-nav li {
     padding: 8px;
@@ -35,7 +42,7 @@ header, footer {
 .book h2 {
     color: #b30059;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     margin: 20px;
 }
 .book p {
