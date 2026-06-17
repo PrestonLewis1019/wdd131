@@ -10,6 +10,7 @@ const character = {
 
         if (this.health <= 0) {
             this.health = 0;
+            alert(`${this.name} has been defeated!`);
         }
 
         renderCharacter();
@@ -17,6 +18,7 @@ const character = {
 
     levelUp: function () {
         this.level++;
+
         renderCharacter();
     }
 };
