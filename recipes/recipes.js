@@ -378,9 +378,7 @@ function renderRecipe(recipe) {
     recipeContainer.innerHTML += html
 }
 
-recipes
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .forEach(recipe => renderRecipe(recipe));
+
 
 
 
