@@ -294,7 +294,8 @@ function search() {
 
         recipe.name.toLowerCase().includes(searchText) ||
         recipe.description.toLowerCase().includes(searchText) ||
-        recipe.tags.some(tag =>tag.toLowerCase().includes(searchText)
+        recipe.tags.some(tag =>
+            tag.toLowerCase().includes(searchText)
         )
 
     );
@@ -377,7 +378,9 @@ function renderRecipe(recipe) {
     recipeContainer.innerHTML += html
 }
 
-
+recipes
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .forEach(recipe => renderRecipe(recipe));
 
 
 
