@@ -3,32 +3,32 @@ const questions = [
     {
         question: "What are common signs of low blood sugar?",
         answers: [
-            "Extreme thirst and frequent urination",
             "Shaking, sweating, confusion, and dizziness",
-            "Nausea and stomach pain",
-            "Fruity breath"
+            "Extreme thirst and frequent urination",
+            "Nausea and fruity breath",
+            "Missed insulin doses"
         ],
         correct: "Shaking, sweating, confusion, and dizziness"
     },
 
     {
-        question: "What should you do when experiencing low blood sugar?",
+        question: "What should someone do when experiencing low blood sugar?",
         answers: [
-            "Stop checking blood sugar",
-            "Exercise immediately",
+            "Ignore the symptoms",
             "Use fast-acting glucose",
-            "Ignore the symptoms"
+            "Stop checking blood sugar",
+            "Skip insulin"
         ],
         correct: "Use fast-acting glucose"
     },
 
     {
-        question: "Which symptom is linked to high blood sugar?",
+        question: "Which symptoms are linked to high blood sugar?",
         answers: [
             "Shaking and sweating",
-            "Fruity breath",
-            "Vomiting only",
-            "Extreme thirst, tiredness, and frequent urination"
+            "Extreme thirst, tiredness, and frequent urination",
+            "Fruity breath only",
+            "Stomach pain"
         ],
         correct: "Extreme thirst, tiredness, and frequent urination"
     },
@@ -37,9 +37,9 @@ const questions = [
         question: "What should you do if your blood sugar is high?",
         answers: [
             "Check blood sugar and follow your care plan",
-            "Stop taking insulin",
             "Eat more sugar",
-            "Ignore the symptoms"
+            "Ignore the symptoms",
+            "Stop using insulin"
         ],
         correct: "Check blood sugar and follow your care plan"
     },
@@ -47,71 +47,70 @@ const questions = [
     {
         question: "What does DKA stand for?",
         answers: [
-            "Diabetes Knowledge Assessment",
-            "Daily Ketone Activity",
             "Diabetic Ketoacidosis",
-            "Diabetes Kidney Attack"
+            "Diabetes Kidney Attack",
+            "Daily Ketone Assessment",
+            "Diabetes Knowledge Awareness"
         ],
         correct: "Diabetic Ketoacidosis"
     },
 
     {
-        question: "Which symptoms can be signs of DKA?",
+        question: "Which symptoms may be signs of DKA?",
         answers: [
             "Coughing and sneezing",
             "Nausea, vomiting, stomach pain, and fruity breath",
-            "Extreme thirst only",
-            "Shaking and sweating"
+            "Improved energy",
+            "Low thirst"
         ],
         correct: "Nausea, vomiting, stomach pain, and fruity breath"
     },
 
     {
-        question: "What should you do if you have high ketones?",
+        question: "What should someone do if they have high ketones?",
         answers: [
-            "Drink soda",
-            "Skip insulin",
             "Ignore the symptoms",
-            "Check ketones and contact your doctor"
+            "Drink only water",
+            "Check ketones and contact your doctor",
+            "Stop monitoring blood sugar"
         ],
         correct: "Check ketones and contact your doctor"
     },
 
     {
-        question: "Which symptom may happen with high ketones?",
-        answers: [
-            "Improved energy",
-            "No symptoms",
-            "Nausea, vomiting, and tiredness",
-            "Better vision"
-        ],
-        correct: "Nausea, vomiting, and tiredness"
-    },
-
-    {
         question: "What can cause insulin problems?",
         answers: [
+            "Drinking water",
             "Getting enough sleep",
-            "Missed insulin or pump failure",
-            "Eating vegetables",
-            "Drinking water"
+            "Missed insulin doses or pump failure",
+            "Eating healthy foods"
         ],
-        correct: "Missed insulin or pump failure"
+        correct: "Missed insulin doses or pump failure"
     },
 
     {
-        question: "What should you do if there is an insulin problem?",
+        question: "What is insulin resistance?",
         answers: [
-            "Wait several days",
-            "Ignore it",
-            "Check insulin equipment",
-            "Stop monitoring blood sugar"
+            "When the body does not respond well to insulin",
+            "When the body produces too much glucose",
+            "When someone never needs insulin",
+            "When blood sugar is always low"
         ],
-        correct: "Check insulin equipment"
+        correct: "When the body does not respond well to insulin"
+    },
+
+    {
+        question: "Which can be a sign of insulin resistance?",
+        answers: [
+            "Increased thirst, tiredness, and frequent urination",
+            "Fruity breath only",
+            "Shaking after exercise",
+            "No symptoms ever"
+        ],
+        correct: "Increased thirst, tiredness, and frequent urination"
     }
 
 ];
-
 
 
 const questionText = document.querySelector("#question");
