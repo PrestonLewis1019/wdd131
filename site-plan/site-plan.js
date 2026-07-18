@@ -3,54 +3,54 @@ const questions = [
     {
         question: "What are common signs of low blood sugar?",
         answers: [
-            "Shaking, sweating, confusion, and dizziness",
             "Extreme thirst and frequent urination",
-            "Fever and coughing",
-            "Skin rash"
+            "Shaking, sweating, confusion, and dizziness",
+            "Nausea and stomach pain",
+            "Fruity breath"
         ],
         correct: "Shaking, sweating, confusion, and dizziness"
     },
 
     {
-        question: "What should you do for low blood sugar?",
+        question: "What should you do when experiencing low blood sugar?",
         answers: [
-            "Ignore it and wait",
-            "Check blood sugar and use fast-acting glucose",
+            "Stop checking blood sugar",
             "Exercise immediately",
-            "Drink only water"
+            "Use fast-acting glucose",
+            "Ignore the symptoms"
         ],
-        correct: "Check blood sugar and use fast-acting glucose"
+        correct: "Use fast-acting glucose"
     },
 
     {
-        question: "Which symptom is commonly linked to high blood sugar?",
+        question: "Which symptom is linked to high blood sugar?",
         answers: [
-            "Extreme thirst and frequent urination",
             "Shaking and sweating",
-            "Broken bones",
-            "Ear pain"
+            "Fruity breath",
+            "Vomiting only",
+            "Extreme thirst, tiredness, and frequent urination"
         ],
-        correct: "Extreme thirst and frequent urination"
+        correct: "Extreme thirst, tiredness, and frequent urination"
     },
 
     {
-        question: "What should someone do if they have high blood sugar?",
+        question: "What should you do if your blood sugar is high?",
         answers: [
+            "Check blood sugar and follow your care plan",
+            "Stop taking insulin",
             "Eat more sugar",
-            "Ignore the symptoms",
-            "Check blood sugar and follow their care plan",
-            "Stop drinking water"
+            "Ignore the symptoms"
         ],
-        correct: "Check blood sugar and follow their care plan"
+        correct: "Check blood sugar and follow your care plan"
     },
 
     {
         question: "What does DKA stand for?",
         answers: [
-            "Diabetes Kidney Attack",
+            "Diabetes Knowledge Assessment",
+            "Daily Ketone Activity",
             "Diabetic Ketoacidosis",
-            "Daily Ketone Adjustment",
-            "Diabetes Knowledge Awareness"
+            "Diabetes Kidney Attack"
         ],
         correct: "Diabetic Ketoacidosis"
     },
@@ -58,10 +58,10 @@ const questions = [
     {
         question: "Which symptoms can be signs of DKA?",
         answers: [
+            "Coughing and sneezing",
             "Nausea, vomiting, stomach pain, and fruity breath",
-            "Sneezing and coughing",
-            "Headache only",
-            "Joint pain"
+            "Extreme thirst only",
+            "Shaking and sweating"
         ],
         correct: "Nausea, vomiting, stomach pain, and fruity breath"
     },
@@ -69,91 +69,85 @@ const questions = [
     {
         question: "What should you do if you have high ketones?",
         answers: [
-            "Check ketones and contact your healthcare provider",
-            "Eat candy",
+            "Drink soda",
             "Skip insulin",
-            "Ignore the symptoms"
+            "Ignore the symptoms",
+            "Check ketones and contact your doctor"
         ],
-        correct: "Check ketones and contact your healthcare provider"
+        correct: "Check ketones and contact your doctor"
     },
 
     {
-        question: "Which of these can cause insulin problems?",
+        question: "Which symptom may happen with high ketones?",
         answers: [
-            "Missed insulin doses or pump failure",
-            "Drinking water",
+            "Improved energy",
+            "No symptoms",
+            "Nausea, vomiting, and tiredness",
+            "Better vision"
+        ],
+        correct: "Nausea, vomiting, and tiredness"
+    },
+
+    {
+        question: "What can cause insulin problems?",
+        answers: [
             "Getting enough sleep",
-            "Eating vegetables"
+            "Missed insulin or pump failure",
+            "Eating vegetables",
+            "Drinking water"
         ],
-        correct: "Missed insulin doses or pump failure"
+        correct: "Missed insulin or pump failure"
     },
 
     {
-        question: "Why is checking blood sugar important during an emergency?",
+        question: "What should you do if there is an insulin problem?",
         answers: [
-            "It helps know if blood sugar is too high or too low",
-            "It replaces insulin",
-            "It prevents all illness",
-            "It removes ketones instantly"
+            "Wait several days",
+            "Ignore it",
+            "Check insulin equipment",
+            "Stop monitoring blood sugar"
         ],
-        correct: "It helps know if blood sugar is too high or too low"
-    },
-
-    {
-        question: "When should someone seek medical help with diabetes?",
-        answers: [
-            "When symptoms are severe or DKA is suspected",
-            "Only once a year",
-            "Never",
-            "Only after eating"
-        ],
-        correct: "When symptoms are severe or DKA is suspected"
+        correct: "Check insulin equipment"
     }
 
 ];
 
+
+// Quiz Elements
 const questionText = document.querySelector("#question");
 const answerBox = document.querySelector("#answers");
 const nextButton = document.querySelector("#next-btn");
 const result = document.querySelector("#result");
 
-
-let questionNumber = 0;
+let currentQuestion = 0;
 let score = 0;
 
 
-function displayQuestion() {
+// Show Question
+function showQuestion() {
 
-    let question = questions[questionNumber];
+    let quiz = questions[currentQuestion];
 
-    questionText.textContent = question.question;
-
+    questionText.textContent = quiz.question;
     answerBox.innerHTML = "";
 
-
-    question.answers.forEach(function(answer) {
+    quiz.answers.forEach(answer => {
 
         let button = document.createElement("button");
 
         button.textContent = answer;
 
+        button.onclick = function() {
 
-        button.addEventListener("click", function() {
-
-            if (answer === question.correct) {
-
+            if (answer === quiz.correct) {
                 result.textContent = "Correct!";
-
                 score++;
-
-            } else {
-
+            }
+            else {
                 result.textContent = "Incorrect!";
-
             }
 
-        });
-
+        };
 
         answerBox.appendChild(button);
 
@@ -162,36 +156,35 @@ function displayQuestion() {
 }
 
 
-nextButton.addEventListener("click", function() {
+// Next Button
+nextButton.onclick = function() {
 
-    questionNumber++;
+    currentQuestion++;
 
-    if (questionNumber < questions.length) {
-
-        displayQuestion();
-
-    } else {
-
-        questionText.textContent = "Quiz Complete!";
-
-        result.textContent = "Score: " + score + "/" + questions.length;
-
+    if (currentQuestion < questions.length) {
+        showQuestion();
+        result.textContent = "";
+    }
+    else {
+        questionText.textContent = "Quiz Finished!";
+        result.textContent = `Score: ${score}/${questions.length}`;
         answerBox.innerHTML = "";
-
         nextButton.style.display = "none";
     }
 
-});
+};
 
 
-displayQuestion();
+showQuestion();
 
+
+
+// Emergency Cards
 const symptoms = [
- 
     {
         name: "Low Blood Sugar",
         signs: "Shaking, sweating, confusion, dizziness.",
-        action: "Check blood sugar and use fast-acting glucose.",
+        action: "Use fast-acting glucose.",
         image: "images.jpg"
     },
 
@@ -203,49 +196,47 @@ const symptoms = [
     },
 
     {
-        name: "DKA (Diabetic Ketoacidosis)",
-        signs: "Nausea, vomiting, stomach pain, fruity breath, rapid breathing.",
-        action: "Seek medical help immediately.",
+        name: "DKA",
+        signs: "Nausea, vomiting, stomach pain, fruity breath.",
+        action: "Seek medical help.",
         image: "DKA.jpg"
     },
 
     {
         name: "High Ketones",
-        signs: "Abdominal pain, nausea, vomiting, tiredness.",
-        action: "Check ketones and contact your healthcare provider.",
-        image: "https://www.novacares.com/images/th_KetoneAction_Guide.jpg"
+        signs: "Nausea, vomiting, tiredness.",
+        action: "Check ketones and contact your doctor.",
+        image: "ketones.jpg"
     },
 
     {
         name: "Insulin Problems",
-        signs: "Missed insulin doses, pump failure, or incorrect insulin amount.",
-        action: "Check equipment, take insulin as directed, and monitor glucose.",
+        signs: "Missed insulin or pump failure.",
+        action: "Check insulin equipment.",
         image: "prob.jpg"
     }
 ];
 
 
-
 const cardContainer = document.querySelector("#card-container");
 
 
-function displaySymptoms() {
+function showSymptoms() {
 
-    symptoms.forEach(function(symptom) {
+    symptoms.forEach(symptom => {
 
         cardContainer.innerHTML += `
             <div class="card">
+                <img src="${symptom.image}" alt="${symptom.name}">
                 <h3>${symptom.name}</h3>
-                <p>Signs: ${symptom.signs}</p>
-                <p>What to do: ${symptom.action}</p>
-                  <img src="${symptom.image}" alt="${symptom.name}">
+                <p>${symptom.signs}</p>
+                <p>${symptom.action}</p>
             </div>
         `;
 
     });
-    
 
 }
 
 
-displaySymptoms();
+showSymptoms();
