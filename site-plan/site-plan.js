@@ -210,10 +210,10 @@ const symptoms = [
     },
 
     {
-        name: "Insulin Problems",
-        signs: "Missed insulin or pump failure.",
-        action: "Check insulin equipment.",
-        image: "prob.jpg"
+         name: "Insulin Resistance",
+    signs: "Tiredness, increased thirst, frequent urination, increased hunger.",
+    action: "Monitor blood sugar, follow a healthy lifestyle, and talk with a healthcare provider.",
+    image: "prob.jpg"
     }
 ];
 
