@@ -113,7 +113,7 @@ const questions = [
 ];
 
 
-// Quiz Elements
+
 const questionText = document.querySelector("#question");
 const answerBox = document.querySelector("#answers");
 const nextButton = document.querySelector("#next-btn");
@@ -123,7 +123,7 @@ let currentQuestion = 0;
 let score = 0;
 
 
-// Show Question
+
 function showQuestion() {
 
     let quiz = questions[currentQuestion];
@@ -156,7 +156,7 @@ function showQuestion() {
 }
 
 
-// Next Button
+
 nextButton.onclick = function() {
 
     currentQuestion++;
@@ -179,7 +179,7 @@ showQuestion();
 
 
 
-// Emergency Cards
+
 const symptoms = [
     {
         name: "Low Blood Sugar",
