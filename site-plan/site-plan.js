@@ -137,17 +137,17 @@ function showQuestion() {
 
         button.textContent = answer;
 
-        button.onclick = function() {
+       button.addEventListener("click", function () {
 
             if (answer === quiz.correct) {
                 result.textContent = "Correct!";
                 score++;
-            }
+            } 
             else {
                 result.textContent = "Incorrect!";
             }
 
-        };
+        });
 
         answerBox.appendChild(button);
 
