@@ -46,6 +46,7 @@ header {
 .logo {
     width: 100px;
     height: auto;
+    height: auto;
 }
 
 
@@ -89,6 +90,7 @@ section {
 
 .card img {
     width: 35%;
+    height: auto;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
