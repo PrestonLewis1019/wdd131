@@ -1,108 +1,115 @@
 const questions = [
+
     {
-        question: "Can high blood sugar cause your body to be pale?",
+        question: "What are common signs of low blood sugar?",
         answers: [
-            "True",
-            "False"
+            "Shaking, sweating, confusion, and dizziness",
+            "Extreme thirst and frequent urination",
+            "Fever and coughing",
+            "Skin rash"
         ],
-        correct: "False"
+        correct: "Shaking, sweating, confusion, and dizziness"
     },
 
     {
-        question: "What causes Type 1 Diabetes?",
+        question: "What should you do for low blood sugar?",
         answers: [
-        
-            "Eating too much sugar",
-            "Having a bad diet",
-            "The immune system attacks beta cells in the pancreas"
+            "Ignore it and wait",
+            "Check blood sugar and use fast-acting glucose",
+            "Exercise immediately",
+            "Drink only water"
         ],
-        correct: "The immune system attacks beta cells in the pancreas"
+        correct: "Check blood sugar and use fast-acting glucose"
     },
 
     {
-        question: "What hormone does the pancreas stop producing in Type 1 Diabetes?",
+        question: "Which symptom is commonly linked to high blood sugar?",
         answers: [
-            "Insulin",
-            "Adrenaline",
-            "Glucose"
-        ],
-        correct: "Insulin"
-    },
-
-    {
-        question: "Which of these is a common sign of low blood sugar?",
-        answers: [
-            
-            "Growing taller",
+            "Extreme thirst and frequent urination",
             "Shaking and sweating",
-            "Improved vision"
+            "Broken bones",
+            "Ear pain"
         ],
-        correct: "Shaking and sweating"
+        correct: "Extreme thirst and frequent urination"
     },
 
     {
-        question: "What can help treat mild low blood sugar?",
+        question: "What should someone do if they have high blood sugar?",
         answers: [
-            
-            "Skipping all meals",
-            "Drinking only water",
-            "Fast-acting sugar such as glucose tablets"
+            "Eat more sugar",
+            "Ignore the symptoms",
+            "Check blood sugar and follow their care plan",
+            "Stop drinking water"
         ],
-        correct: "Fast-acting sugar such as glucose tablets"
+        correct: "Check blood sugar and follow their care plan"
     },
 
     {
-        question: "Which symptom can be a sign of high blood sugar?",
+        question: "What does DKA stand for?",
         answers: [
-           
-            "Cold hands only",
-             "Extreme thirst",
-            "Better concentration"
+            "Diabetes Kidney Attack",
+            "Diabetic Ketoacidosis",
+            "Daily Ketone Adjustment",
+            "Diabetes Knowledge Awareness"
         ],
-        correct: "Extreme thirst"
+        correct: "Diabetic Ketoacidosis"
     },
 
     {
-        question: "What device can measure blood glucose levels?",
+        question: "Which symptoms can be signs of DKA?",
         answers: [
-           
-            "Thermometer",
-            "Blood pressure cuff",
-            "Glucose meter"
+            "Nausea, vomiting, stomach pain, and fruity breath",
+            "Sneezing and coughing",
+            "Headache only",
+            "Joint pain"
         ],
-        correct: "Glucose meter"
+        correct: "Nausea, vomiting, stomach pain, and fruity breath"
     },
 
     {
-        question: "What is insulin used for in the body?",
+        question: "What should you do if you have high ketones?",
         answers: [
-            "Helping glucose enter cells for energy",
-            "Making bones stronger",
-            "Increasing body temperature"
+            "Check ketones and contact your healthcare provider",
+            "Eat candy",
+            "Skip insulin",
+            "Ignore the symptoms"
         ],
-        correct: "Helping glucose enter cells for energy"
+        correct: "Check ketones and contact your healthcare provider"
     },
 
     {
-        question: "Which of these can be a warning sign of diabetic ketoacidosis (DKA)?",
+        question: "Which of these can cause insulin problems?",
         answers: [
-            "Feeling relaxed",
-            "Nausea and vomiting",
-            "Improved energy"
+            "Missed insulin doses or pump failure",
+            "Drinking water",
+            "Getting enough sleep",
+            "Eating vegetables"
         ],
-        correct: "Nausea and vomiting"
+        correct: "Missed insulin doses or pump failure"
     },
 
     {
-        question: "Why is it important to recognize diabetes emergency symptoms?",
+        question: "Why is checking blood sugar important during an emergency?",
         answers: [
-            "To avoid drinking water",
-            "To stop checking blood sugar",
-            "To respond quickly and get help when needed",
-
+            "It helps know if blood sugar is too high or too low",
+            "It replaces insulin",
+            "It prevents all illness",
+            "It removes ketones instantly"
         ],
-        correct: "To respond quickly and get help when needed"
+        correct: "It helps know if blood sugar is too high or too low"
+    },
+
+    {
+        question: "When should someone seek medical help with diabetes?",
+        answers: [
+            "When symptoms are severe or DKA is suspected",
+            "Only once a year",
+            "Never",
+            "Only after eating"
+        ],
+        correct: "When symptoms are severe or DKA is suspected"
     }
+
 ];
 
 const questionText = document.querySelector("#question");
