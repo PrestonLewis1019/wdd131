@@ -156,7 +156,7 @@ function showQuestion() {
 
 
 
-nextButton.onclick = function() {
+nextButton.addEventListener("click", function () {
 
     currentQuestion++;
 
@@ -171,7 +171,7 @@ nextButton.onclick = function() {
         nextButton.style.display = "none";
     }
 
-};
+});
 
 
 showQuestion();
