@@ -49,9 +49,7 @@ header {
 }
 
 
-.title-container {
-    text-align: center;
-}
+
 
 nav {
     display: flex;
@@ -78,11 +76,7 @@ section {
 }
 
 
-/* Symptom Cards */
-#card-container {
-    display: grid;
-    gap: 1.5rem;
-}
+
 
 
 .card {
@@ -111,12 +105,6 @@ section {
 }
 
 
-.quiz-image {
-    width: 250px;
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
 
 
 #answers {
@@ -178,23 +166,6 @@ footer {
         grid-column: 1 / 3;
     }
 
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.logo {
-    width: 100px;
-    height: auto;
-}
-
-
-.title-container {
-    text-align: center;
-}
 
 
 }
