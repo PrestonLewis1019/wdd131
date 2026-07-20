@@ -170,7 +170,7 @@ nextButton.addEventListener("click", function () {
         answerBox.innerHTML = "";
         nextButton.style.display = "none";
     }
- 
+ d
 });
 
 
